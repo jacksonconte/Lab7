@@ -170,9 +170,9 @@
         hideRecordForm();
         let id = prompt('Enter record ID:');
         fetch(endpoint.value + '/' + id, {
-          method: 'del',
+          method: 'delete',
           headers: FETCH_HEADER,
-          body: JSON.stringify({id: id})
+          // body: JSON.stringify({id: id})
         }).then(response => response.text())
         .then(data => { output.innerHTML = data })
         .catch(error => { output.innerHTML = error});
